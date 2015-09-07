@@ -6,33 +6,23 @@ With lorawan-parser, one could see all details of LoRaWAN, like how frames are d
 
 # Compile
 
-## Linux
+## Raspberry-Pi, Raspbian
 
-Depends on tools *libtool*, *automake*. To build:
-
+    sudo apt-get install dh-autoreconf
     cd lorawan-parser
     autoreconf -i
     ./configure
     make
 
-## Windows
-
-### Codeblocks
-lorawan-parser supports [Codeblocks](http://www.codeblocks.org/) project. One could download Codeblocks from its official website.
-
-### CMake
-*Not supported yet. You are welcome to send me CMake patches.*
 
 # Usage
 
 Refer to `util/test/main.c` to know the usage of lorawan API.
 
-After compile find `parser.exe/lwp` under `util/parser/` directory to parse the LoRaWAN frame.
+After compile find `lwp` under `util/parser/` directory to parse the LoRaWAN frame.
 
-	# WIN
-    parser.exe -c lwp-config.json
 	# Linux
-    lwp -c lwp-config.json
+    ./lwp -c lwp-config.json
 
 To go further, user could fill their own LoRaWAN frames in a json file to parse it.
 
